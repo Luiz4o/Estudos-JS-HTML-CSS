@@ -1,0 +1,125 @@
+/* Cabeçalho */
+
+.cabecalho__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+/* Menu Container  */
+
+.menu__container {
+    position: fixed;
+    bottom: 0;
+    height: 74px;
+    width: 100%;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    /* align-items: center; */
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none;
+}
+
+/* Superior seção */
+
+.superior__secao__container {
+    display: flex;
+    /* Alinha os items fora do eixo principal(eixo principal == eixo horizontal == eixo X) ou seja alinha eles através do eixo na vertical == eixo Y */
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    /* Aplica um espaçamento somenete entre os itens não se aplica as bordas do elemento */
+    gap: 15px;
+}
+
+/* Rodape */
+
+.rodape__container {
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+}
+
+
+
+@media (min-width: 834px) {
+    /* Cabeçalho */
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    /* Menu Container */
+
+    .menu__container {
+        position: fixed;
+        left: 0px;
+        width: 74px;
+        height: 100%;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 35px;
+    }
+
+    /* Rodape */
+
+    .rodape__container {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+       display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+
